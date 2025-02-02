@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 # Judul aplikasi
 st.title("🎓 Prediksi Status Mahasiswa (Graduate/Dropout)")
@@ -9,8 +10,30 @@ st.title("🎓 Prediksi Status Mahasiswa (Graduate/Dropout)")
 # Memuat model dan scaler
 @st.cache_resource  # Cache resource untuk mempercepat loading
 def load_model():
-    model = joblib.load(r'C:\Kuliah\Project\Automate Rating Labti\random_forest_model_fix.pkl')
-    scaler = joblib.load(r'C:\Kuliah\Project\Automate Rating Labti\scaler.pkl')
+    # URL untuk file raw
+    model_url = "https://raw.githubusercontent.com/Shacent/Submission-2/main/random_forest_model_fix.pkl"
+    scaler_url = "https://raw.githubusercontent.com/Shacent/Submission-2/main/scaler.pkl"
+    
+    # Path untuk menyimpan file sementara
+    model_path = "random_forest_model_fix.pkl"
+    scaler_path = "scaler.pkl"
+    
+    # Unduh model jika belum ada
+    if not os.path.exists(model_path):
+        with open(model_path, 'wb') as file:
+            response = requests.get(model_url)
+            file.write(response.content)
+    
+    # Unduh scaler jika belum ada
+    if not os.path.exists(scaler_path):
+        with open(scaler_path, 'wb') as file:
+            response = requests.get(scaler_url)
+            file.write(response.content)
+    
+    # Muat model dan scaler
+    model = joblib.load(model_path)
+    scaler = joblib.load(scaler_path)
+    
     return model, scaler
 
 rf_model, scaler = load_model()
