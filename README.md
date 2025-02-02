@@ -69,7 +69,7 @@ Dataset mencakup informasi seperti mata kuliah yang diselesaikan, nilai penerima
 
 #### a. Solusi Machine Learning
 **Prototipe Streamlit**: 
-- URL Prototipe: [Streamlit Deployment Link](https://streamlit.app/)
+- URL Prototipe: [Streamlit Deployment Link]([https://streamlit.app/](https://jaya-institute-model-deployment.streamlit.app/))
 - Fitur:
   - Input data mahasiswa.
   - Prediksi apakah mahasiswa akan dropout atau tidak.
@@ -77,7 +77,7 @@ Dataset mencakup informasi seperti mata kuliah yang diselesaikan, nilai penerima
 
 #### b. Dashboard Monitoring
 **Metabase/Tableau/Looker Studio**:
-- **Dashboard Link**: [Dashboard Monitoring](https://metabase-link.com/)
+- **Dashboard Link**: [Dashboard Monitoring]([https://metabase-link.com/](https://github.com/Shacent/Submission-2/blob/main/Jaya%20Jaya%20Institute%20Dashboard%20-%20Hauzan.pdf))
 - Fitur:
   - Visualisasi distribusi dropout mahasiswa.
   - Analisis fitur penting (feature importance).
@@ -125,6 +125,6 @@ Berdasarkan hasil analisis, berikut adalah rekomendasi untuk Jaya Jaya Institut:
 
 ## Informasi Tambahan
 ### Email dan Password Metabase:
-- Email: `root@mail.com`
-- Password: `root123`
+- Email: `hauzandini@mail.com`
+- Password: `Shacent.54321`
 
