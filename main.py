@@ -5,7 +5,7 @@ import joblib
 import os
 
 # Judul aplikasi
-st.title("🎓 Prediksi Status Mahasiswa (Graduate/Dropout)")
+st.title("🎓 Prediksi Status Mahasiswa (Graduate/Dropout) - Hauzan")
 
 # Memuat model dan scaler
 @st.cache_resource  # Cache resource untuk mempercepat loading
