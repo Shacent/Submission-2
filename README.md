@@ -77,7 +77,7 @@ Dataset mencakup informasi seperti mata kuliah yang diselesaikan, nilai penerima
 
 #### b. Dashboard Monitoring
 **Metabase**:
-- **Dashboard Link**: [Dashboard Link]([https://jaya-institute-model-deployment.streamlit.app/](http://localhost:3000/public/dashboard/5574170d-01c7-4dae-b6a8-703943eb6070))
+- **Dashboard Link**: [Metabase Dashboard](http://localhost:3000/public/dashboard/5574170d-01c7-4dae-b6a8-703943eb6070) 
 - Fitur:
   - Visualisasi distribusi dropout mahasiswa.
   - Analisis fitur penting.
