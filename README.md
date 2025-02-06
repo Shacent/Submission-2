@@ -12,7 +12,7 @@ Tingginya tingkat dropout mahasiswa yang dapat berdampak pada citra dan keberlan
 - **Deployment Model dan Dashboard Monitoring**: Mengimplementasikan model untuk prediksi dan membuat dashboard untuk memantau data terkait dropout mahasiswa.
 
 ### Persiapan
-Sumber data: Data historis mahasiswa Jaya Jaya Institut, mencakup informasi seperti nilai akademik, status pembayaran biaya kuliah, dan data demografi.
+Sumber data: https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv
 
 Setup environment:
 ```bash
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ## Business Understanding
 Business dashboard dibuat menggunakan Metabase, yang memberikan visualisasi data terkait dropout mahasiswa, distribusi pembayaran biaya kuliah, dan analisis faktor penting lainnya. Dashboard ini memungkinkan tim untuk memonitor secara real-time dan menganalisis tren terkait mahasiswa berisiko dropout.
-- Link Dashboard: 
+- Link Dashboard: [Metabase Dashboard Link](http://localhost:3000/public/dashboard/5574170d-01c7-4dae-b6a8-703943eb6070)
 
 ## Menjalankan Sistem Machine Learning
 Prototipe sistem machine learning ini dibuat menggunakan Streamlit untuk mempermudah pengguna dalam mengakses dan menjalankan model prediksi dropout. Model ini menggunakan algoritma Random Forest untuk melakukan prediksi dropout mahasiswa berdasarkan data yang dimasukkan.
