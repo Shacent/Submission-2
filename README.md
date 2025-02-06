@@ -1,130 +1,83 @@
-# Analisis Prediksi Dropout Mahasiswa - Jaya Jaya Institut
+# Proyek Akhir: Menyelesaikan Permasalahan Institusi Pendidikan (Jaya Jaya Institut)
 
-## Deskripsi Proyek
-Jaya Jaya Institut menghadapi permasalahan tingkat dropout mahasiswa yang tinggi. Proyek ini bertujuan untuk mengidentifikasi faktor-faktor penyebab dropout mahasiswa dan memberikan solusi berbasis data yang dapat membantu institusi melakukan intervensi dini. Proyek ini dilakukan menggunakan pendekatan data science yang mencakup proses end-to-end, dari business understanding hingga deployment.
+## Business Understanding
+Jaya Jaya Institut menghadapi tantangan besar terkait dengan tingginya tingkat dropout mahasiswa. Proyek ini bertujuan untuk memberikan solusi berbasis data untuk mengidentifikasi faktor-faktor penyebab dropout mahasiswa serta memberikan rekomendasi strategis untuk mengurangi tingkat tersebut. Solusi yang dikembangkan menggunakan pendekatan data science, dimulai dengan pemahaman bisnis hingga implementasi model machine learning yang siap digunakan oleh institusi.
 
----
+### Permasalahan Bisnis
+Tingginya tingkat dropout mahasiswa yang dapat berdampak pada citra dan keberlanjutan operasional institusi. Identifikasi faktor-faktor yang mempengaruhi keputusan mahasiswa untuk berhenti kuliah sangat penting untuk merancang kebijakan pencegahan yang tepat.
 
-## Struktur Proyek
-Proyek ini menggunakan struktur templat proyek yang telah disediakan. Berikut adalah rincian strukturnya:
+### Cakupan Proyek
+- **Analisis Faktor Penyebab Dropout**: Menyusun daftar faktor-faktor yang mempengaruhi tingkat dropout mahasiswa berdasarkan data yang tersedia.
+- **Pengembangan Model Prediksi Dropout**: Menggunakan algoritma machine learning untuk membangun model prediksi dropout.
+- **Deployment Model dan Dashboard Monitoring**: Mengimplementasikan model untuk prediksi dan membuat dashboard untuk memantau data terkait dropout mahasiswa.
 
-- **Business Understanding**: Penjelasan masalah, tujuan, dan parameter kesuksesan.
-- **Data Understanding**: Eksplorasi dataset, analisis fitur penting, dan visualisasi data awal.
-- **Data Preparation**: Pembersihan data dan transformasi fitur untuk digunakan dalam model machine learning.
-- **Modeling**: Pengembangan model prediksi menggunakan algoritma Random Forest.
-- **Evaluation**: Evaluasi model berdasarkan metrik kinerja seperti akurasi, presisi, recall, dan F1-score.
-- **Deployment**: Implementasi model machine learning dan dashboard monitoring menggunakan Streamlit dan Metabase.
+### Persiapan
+Sumber data: Data historis mahasiswa Jaya Jaya Institut, mencakup informasi seperti nilai akademik, status pembayaran biaya kuliah, dan data demografi.
 
----
+Setup environment:
+```bash
+git clone https://github.com/Shacent/Submission-2.git
+cd Submission-2
+pip install -r requirements.txt
+```
 
-## Tools yang Digunakan
-- **Python**: Untuk analisis data, pemrosesan, dan pengembangan model machine learning.
-- **Streamlit**: Untuk membuat prototipe solusi machine learning yang siap digunakan.
-- **Metabase**: Untuk pembuatan dashboard monitoring data.
-- **Docker**: Untuk menyimpan dan mengekspor instance database Metabase.
+## Business Understanding
+Business dashboard dibuat menggunakan Metabase, yang memberikan visualisasi data terkait dropout mahasiswa, distribusi pembayaran biaya kuliah, dan analisis faktor penting lainnya. Dashboard ini memungkinkan tim untuk memonitor secara real-time dan menganalisis tren terkait mahasiswa berisiko dropout.
+- Link Dashboard: 
 
----
+## Menjalankan Sistem Machine Learning
+Prototipe sistem machine learning ini dibuat menggunakan Streamlit untuk mempermudah pengguna dalam mengakses dan menjalankan model prediksi dropout. Model ini menggunakan algoritma Random Forest untuk melakukan prediksi dropout mahasiswa berdasarkan data yang dimasukkan.
 
-## Tahapan Proyek
+- Link Prototipe: [Streamlit Deployment Link](https://jaya-institute-model-deployment.streamlit.app/)
 
-### 1. Business Understanding
-**Masalah**: Tingginya tingkat dropout mahasiswa di Jaya Jaya Institut.
-
-**Tujuan**:
-- Mengidentifikasi faktor-faktor utama yang menyebabkan mahasiswa dropout.
-- Memberikan rekomendasi actionable untuk mengurangi tingkat dropout.
-
----
-
-### 2. Data Understanding
-**Dataset**:
-Dataset mencakup informasi seperti mata kuliah yang diselesaikan, nilai penerimaan, pembayaran biaya kuliah, usia pendaftaran, dan lainnya.
-
-**Fitur Penting**:
-1. `Curricular_units_2nd_sem_approved`
-2. `Tuition_fees_up_to_date`
-3. `Curricular_units_1st_sem_approved`
-4. `Curricular_units_2nd_sem_grade`
-5. `Admission_grade`
-6. `Debtor`
-7. `Age_at_enrollment`
-
----
-
-### 3. Data Preparation
-- Membersihkan data dengan menangani nilai kosong dan outlier.
-- Menggunakan teknik standardisasi pada fitur numerik untuk mempersiapkan data ke model.
-
----
-
-### 4. Modeling
-- Algoritma yang digunakan: **Random Forest**
-- Hasil evaluasi model:
-  - Akurasi: 93%
-  - F1-score: {0:95%} , {1:90}
-  - recall: {0:94%} , {1:92}
----
-
-### 5. Deployment
-
-#### a. Solusi Machine Learning
-**Prototipe Streamlit**: 
-- URL Prototipe: [Streamlit Deployment Link](https://jaya-institute-model-deployment.streamlit.app/)
-- Fitur:
-  - Input data mahasiswa.
-  - Prediksi apakah mahasiswa akan dropout atau tidak.
-  - Visualisasi probabilitas dropout.
-
-#### b. Dashboard Monitoring
-**Metabase**:
-- **Dashboard Link**: [Metabase Dashboard](http://localhost:3000/public/dashboard/5574170d-01c7-4dae-b6a8-703943eb6070) 
-- Fitur:
-  - Visualisasi distribusi dropout mahasiswa.
-  - Analisis fitur penting.
-  - Tren pembayaran biaya kuliah.
-
----
-
-## Action Items
-Berdasarkan hasil analisis, berikut adalah rekomendasi untuk Jaya Jaya Institut:
-
-### 1. Pemantauan Akademik
-- Implementasikan sistem monitoring nilai dan kehadiran secara real-time.
-- Terapkan early warning system untuk mengidentifikasi mahasiswa berisiko tinggi.
-
-### 2. Bantuan Keuangan
-- Sediakan program cicilan pembayaran biaya kuliah.
-- Alokasikan anggaran untuk beasiswa berbasis kebutuhan finansial.
-
-### 3. Dukungan Khusus untuk Kelompok Rentan
-- Sediakan kelas malam dan program fleksibel untuk mahasiswa dewasa.
-- Implementasikan program remedial untuk mahasiswa dengan nilai penerimaan rendah.
-
-### 4. Penghargaan untuk Meningkatkan Motivasi
-- Berikan penghargaan akademik dan non-akademik kepada mahasiswa yang menunjukkan progres positif.
-
-### 5. Evaluasi dan Monitoring Berkala
-- Lakukan survei tahunan dan laporan bulanan untuk memantau progres mahasiswa.
-
----
-
-## Cara Menjalankan Prototipe
+Untuk menjalankan sistem di lingkungan lokal, ikuti langkah-langkah berikut:
 1. Clone repository ini:
-   ```bash
-   git clone https://github.com/Shacent/Submission-2.git
-   ```
+```bash
+git clone https://github.com/Shacent/Submission-2.git
+```
+
 2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
+
 3. Jalankan aplikasi Streamlit:
-   ```bash
-   streamlit run main.py
-   ```
+```bash
+streamlit run main.py
+```
+## Conclusion
+Berdasarkan analisis data dan model yang dibangun, ditemukan bahwa beberapa faktor utama yang menyebabkan mahasiswa di Jaya Jaya Institut dropout adalah masalah finansial (terutama bagi mahasiswa yang berstatus sebagai debitur), rendahnya nilai akademik (terutama pada semester pertama), dan rendahnya partisipasi mahasiswa dalam kegiatan perkuliahan. Dengan adanya model prediksi ini, pihak institusi dapat melakukan intervensi lebih dini pada mahasiswa yang berisiko tinggi untuk dropout, sehingga tingkat keberhasilan akademik dapat meningkat.
 
+### Rekomendasi Action Items
+Berdasarkan analisis data dan temuan model prediksi, berikut adalah rekomendasi lebih lanjut yang dapat diterapkan oleh Jaya Jaya Institut untuk mengurangi tingkat dropout mahasiswa:
 
-## Informasi Tambahan
-### Email dan Password Metabase:
-- Email: `hauzandini@mail.com`
-- Password: `Shacent.54321`
+1. **Pemantauan Akademik Real-Time:**
+    - **Sistem Peringatan Dini (Early Warning System):** Mengembangkan sistem yang secara otomatis memberi peringatan kepada pihak administrasi atau dosen ketika mahasiswa menunjukkan penurunan nilai atau kehadiran yang signifikan. Peringatan ini dapat berbentuk notifikasi otomatis untuk memungkinkan intervensi tepat waktu.
+    - **Monitoring Kinerja Akademik Tiap Semester:** Buat sistem dashboard yang menampilkan tren kinerja akademik mahasiswa per semester, termasuk nilai akhir dan partisipasi dalam kegiatan akademik seperti ujian dan tugas. Hal ini memungkinkan dosen atau fakultas untuk melihat perubahan pola belajar yang mungkin mengarah pada risiko dropout.
+
+2. **Bantuan Keuangan dan Program Beasiswa:**
+    - **Program Cicilan Pembayaran Biaya Kuliah:** Untuk mahasiswa yang kesulitan membayar biaya kuliah, tawarkan program cicilan yang fleksibel. Sistem ini dapat berbasis data pemantauan finansial mahasiswa yang menunjukkan bahwa mereka kesulitan membayar biaya kuliah pada waktu yang tepat.
+    - **Beasiswa Berbasis Kebutuhan:** Implementasikan program beasiswa untuk mahasiswa yang menunjukkan kesulitan finansial namun memiliki kinerja akademik yang baik. Data yang diambil dari sistem dapat digunakan untuk menilai kelayakan mahasiswa yang berhak menerima beasiswa.
+
+3. **Penyediaan Program Akademik dan Kelas Tambahan:**
+    - **Program Remedial untuk Mahasiswa dengan Nilai Rendah:** Berdasarkan model prediksi, sediakan kelas remedial untuk mahasiswa yang memiliki nilai rendah terutama pada mata kuliah inti yang berpotensi menghambat kelulusan mereka. Hal ini akan memberikan mereka kesempatan untuk memperbaiki nilai mereka sebelum melanjutkan ke semester berikutnya.
+    - **Kelas Peningkatan Akademik (Catch-Up Classes):** Tawarkan kelas tambahan atau kelas malam bagi mahasiswa yang tertinggal di luar jam kuliah reguler. Mahasiswa yang memiliki masalah dalam mengikuti perkuliahan karena alasan waktu atau pekerjaan bisa lebih fleksibel.
+
+4. **Pendampingan dan Konseling Mahasiswa:**
+    - **Sesi Konseling Akademik dan Psikologis:** Banyak mahasiswa mengalami masalah psikologis yang dapat mempengaruhi keputusan mereka untuk dropout. Sediakan layanan konseling baik dari sisi akademik maupun psikologis untuk membantu mahasiswa mengatasi stres dan kesulitan yang dihadapi. Data yang dianalisis dapat membantu mengidentifikasi mahasiswa yang berisiko tinggi secara psikologis untuk mendapatkan perhatian lebih.
+    - **Kelompok Studi dan Mentoring:** Bentuk kelompok studi atau program mentoring di mana mahasiswa senior atau dosen dapat membantu mahasiswa yang lebih muda dengan masalah akademik atau adaptasi kehidupan kampus.
+
+5. **Penghargaan dan Insentif untuk Meningkatkan Motivasi:**
+    - **Insentif Akademik dan Non-Akademik:** Berikan penghargaan berupa beasiswa atau sertifikat bagi mahasiswa yang menunjukkan progres positif atau kemampuan untuk meningkatkan kinerja akademik mereka setelah melakukan intervensi atau mengikuti program remedial.
+    - **Pengenalan Mahasiswa Berprestasi:** Tampilkan mahasiswa berprestasi secara reguler melalui media sosial kampus atau papan pengumuman sebagai contoh bagi mahasiswa lain untuk meningkatkan motivasi mereka.
+
+6. **Kampanye Penyuluhan Mengenai Dropout:**
+    - **Workshop dan Seminar untuk Mahasiswa Baru:** Adakan sesi penyuluhan di awal semester mengenai pentingnya pemantauan akademik, cara mengatasi stres, dan memanfaatkan layanan kampus yang ada seperti konseling atau bantuan keuangan. Mahasiswa yang lebih memahami apa yang bisa dilakukan ketika mereka menghadapi masalah akan lebih kecil kemungkinannya untuk dropout.
+    - **Peningkatan Kesadaran pada Mahasiswa Rentan:** Gunakan data dari model prediksi untuk menargetkan mahasiswa yang memiliki risiko tinggi untuk dropout dan ajak mereka untuk mengikuti sesi penyuluhan atau bantuan khusus.
+
+        
+
+    
+    
+
 
